@@ -18,7 +18,7 @@ public class JwtTokenProvider {
 
     private final SecretKey jwtSecretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    @Value("${app.jwtExpirationInMs}")
+    @Value("${app.jwt.expiration-in-ms}")
     private long jwtExpirationInMs;
 
     public String generateToken(Authentication authentication) {
